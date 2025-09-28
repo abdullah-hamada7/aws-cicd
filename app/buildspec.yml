@@ -17,4 +17,3 @@ phases:
       - docker push $REPO_URL:latest
       - echo "$SSH_KEY" > ~/.ssh/id_rsa
       - chmod 400 ~/.ssh/id_rsa
-      - ssh -o StrictHostKeyChecking=no ubuntu@$INSTANCE "/home/ubuntu/app/deploy.sh $IMAGE_TAG"
